@@ -1,7 +1,10 @@
 import { getConnection } from "typeorm";
 import { Funcionario } from "../entity/funcionario";
 
+
 export class FuncionarioRepository{
+
+    private funcionario: Array<Funcionario> = [];
     static getAll(){
         const funcionarioRepository = getConnection().getRepository(Funcionario);
         return funcionarioRepository.find();
