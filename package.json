@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node-dev --respawn src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "migration-generate": "npm run typeorm:cli -- migration:generate -n"
   },
   "author": "lucas-serra",
   "license": "ISC",
