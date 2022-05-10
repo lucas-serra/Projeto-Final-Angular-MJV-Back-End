@@ -17,8 +17,8 @@ export class FuncionarioService{
         return FuncionarioRepository.create(funcionario);
     }
 
-    deleteFuncionario(email:string){
-        return FuncionarioRepository.delete({email:email})
+    deleteFuncionario(id:number){
+        return FuncionarioRepository.delete(id);
     }
 
     checkUserMatriculaTaken(matricula:number){

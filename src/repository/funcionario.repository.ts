@@ -25,8 +25,8 @@ export class FuncionarioRepository{
         return funcionarioRepository.insert(funcionario);
     }
 
-    static delete(funcionario:Funcionario){
+    static delete(id:number){
         const funcionarioRepository = getConnection().getRepository(Funcionario);
-        return funcionarioRepository.delete(funcionario);
+        return funcionarioRepository.delete(id);
     }
 }

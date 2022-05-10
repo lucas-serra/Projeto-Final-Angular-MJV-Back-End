@@ -41,13 +41,13 @@ routes.get('/listarUser', async (req:Request, res:Response)=>{
     res.send(funcionario);
 })
 
-routes.delete('/delete/:email', async(req:Request, res:Response)=>{
-    const funcionarioEmail = req.params.email;
-    if(!funcionarioEmail){
+routes.delete('/delete/:id', async(req:Request, res:Response)=>{
+    const funcionarioId = req.params.id;
+    if(!funcionarioId){
         return res.status(400).send(createMessage('Por favor, nos passe um funcionário'));
     }
 
-    const funcionarioRemovido = await funcionarioService.deleteFuncionario(funcionarioEmail);
+    const funcionarioRemovido = await funcionarioService.deleteFuncionario(Number(funcionarioId));
     res.send(funcionarioRemovido);
 })
 export default routes;
